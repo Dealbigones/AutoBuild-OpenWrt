@@ -5,7 +5,7 @@
 # Youtube Channel: https://goo.gl/fvkdwm 
 #=================================================
 
-name: Build_Newifi_D2
+name: wrt32x
 
 on: 
   release:
@@ -68,9 +68,9 @@ jobs:
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         ./scripts/feeds install -a
-    - name: Configuration Customization - Build_Newifi_D2
+    - name: Configuration Customization - wrt32x
       env:
-        CONFIG_FILE: 'Newifi_D2.config'
+        CONFIG_FILE: 'wrt32x.config'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x ./customize.sh && ./customize.sh
